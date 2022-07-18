@@ -48,7 +48,7 @@ INSTALLED_APPS = [
 
 # jwt相关配置
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(days=1), # 访问令牌有效期
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=1), # 访问令牌有效期
     'REFRESH_TOKEN_LIFETIME': timedelta(days=10), # 刷新令牌有效期
 }
 

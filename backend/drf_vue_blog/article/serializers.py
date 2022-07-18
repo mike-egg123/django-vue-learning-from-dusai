@@ -94,6 +94,7 @@ class AvatarSerializer(serializers.ModelSerializer):
 # 由于文章详情和文章列表需要的字段大部分相同，因此抽象出父类
 # 这个HyperlinkedModelSerializer在ModelSerializer的基础上多了个自动关联的超链接外键字段，并且默认不包含模型对象的id字段
 class ArticleBaseSerializer(serializers.HyperlinkedModelSerializer):
+    id = serializers.IntegerField(read_only=True)
     # 文章作者的嵌套序列化字段
     author = UserDescSerializer(read_only=True)
     # 文章分类的嵌套序列化字段
